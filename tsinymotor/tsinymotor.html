@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <style>
+      body { background: #1e1e1e;}
+      p { color: #e1e1e1; }
+      canvas {
+        border: #e1e1e1;
+        border-style: dashed;
+        border-width: 2px;
+      }
+      a { color: #8484ff; }
+      a:visited { color: #955cca; }
+    </style>
+    <title>And then there was CAD</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/threejs/r83/three.min.js"
+    integrity="sha384-lce3k+FkGepfV3qecrT9VnfxKhtsvESFTRFKOUiX3Xpk1P18ryspviVoVdvsSP7U"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/hammerjs/2.0.8/hammer.min.js"
+    integrity="sha384-K8o/rPYJTPizl9Y40HvofWqrKNKxMpFtyihujM7NjJgPlmNNWx3di2S13WKi+hz7"
+    crossorigin="anonymous"></script>
+  <script type='text/javascript' src='solvespace.js'></script>
+  </head>
+  <body>
+    <div class='container'>
+      <p>
+      I made a thing. The actual Solvespace source file
+      is <a href='tsinymotor-TS-53GZ868DIM.slvs'>here</a>
+      and the (potentially mangled) STEP file is
+      <a href='tsinymotor-TS-53GZ868DIM.step'>here</a>.
+      You can also see it below through the Magic of
+      Javascript™
+      </p>
+      <script type='text/javascript' src='tsinymotor.js'></script>
+      <script type='text/javascript' id='tsinymotor'>
+        injectSolveSpace('tsinymotor', tsinymotor,
+            {width: 1024, height: 768, scale: 1});
+      </script>
+    </div>
+
+  </body>
+</html>
